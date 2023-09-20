@@ -4,9 +4,9 @@ public:
     int n=nums.size();
     int m=nums[0].size();
     int col=1;
-    for(int i=0;i<nums.size();i++)
+    for(int i=0;i<n;i++)
     {
-        for(int j=0;j<nums[i].size();j++)
+        for(int j=0;j<m;j++)
         {
             if(nums[i][j]==0)
             {
@@ -23,9 +23,9 @@ public:
             
         }
     }
-    for(int i=1;i<nums.size();i++)
+    for(int i=1;i<n;i++)
     {
-        for(int j=1;j<nums[i].size();j++)
+        for(int j=1;j<m;j++)
         {
             if(nums[i][j]!=0)
             {
