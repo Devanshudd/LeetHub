@@ -8,15 +8,9 @@ public:
     //     return{-1,-1};
     // }
     // return {lw,rw-1};
-     auto low = lower_bound(nums.begin(),nums.end(),target);
-        auto up = upper_bound(nums.begin(),nums.end(),target);
-        
-        if(low == nums.end() || *low != target)    return {-1,-1};
-        
-        int first = low - nums.begin();
-        int last = up - nums.begin()-1;
-        
-        return {first ,last};   
+     int temp = lower_bound(nums.begin(),nums.end(),target) - nums.begin();
+        if((temp==nums.size() || nums[temp]!=target) ) return {-1,-1};
+        return {temp,(int)(upper_bound(nums.begin(),nums.end(),target) - nums.begin()) - 1};
         
         
         
