@@ -9,8 +9,9 @@ public:
     // }
     // return {lw,rw-1};
      int temp = lower_bound(nums.begin(),nums.end(),target) - nums.begin();
+     int temp1= upper_bound(nums.begin(),nums.end(),target) - nums.begin();
         if((temp==nums.size() || nums[temp]!=target) ) return {-1,-1};
-        return {temp,(int)(upper_bound(nums.begin(),nums.end(),target) - nums.begin()) - 1};
+        return {temp,temp1 - 1};
         
         
         
